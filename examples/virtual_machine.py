@@ -13,17 +13,13 @@ vm = VirtualMachine(
             "template": {
                 "spec": {
                     "domain": {
-                        "devices": {
-                            "disks": [{"name": "disk0", "disk": {"bus": "virtio"}}]
-                        },
+                        "devices": {"disks": [{"name": "disk0", "disk": {"bus": "virtio"}}]},
                         "resources": {"requests": {"memory": "64Mi"}},
                     },
                     "volumes": [
                         {
                             "name": "disk0",
-                            "containerDisk": {
-                                "image": "kubevirt/cirros-container-disk-demo"
-                            },
+                            "containerDisk": {"image": "kubevirt/cirros-container-disk-demo"},
                         }
                     ],
                 },
